@@ -647,7 +647,7 @@ export default Controller.extend({
       return;
     }
 
-    const topic = composer.get("topic");
+    const topic = composer.topic;
 
     if (topic.slow_mode_seconds && topic.user_last_posted_at) {
       if (cannotPostAgain(topic.slow_mode_seconds, topic.user_last_posted_at)) {
